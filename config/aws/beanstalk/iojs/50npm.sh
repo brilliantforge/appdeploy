@@ -17,8 +17,8 @@ if [ -d /tmp/deployment/application ]; then
   ln -s /var/node_modules /tmp/deployment/application/
 fi
 
-echo "------------------------------ — Installing/updating NPM modules, it might take a while, go take a leak or have a healthy snack... — -----------------------------------"
-OUT=$([ -d "/tmp/deployment/application" ] && cd /tmp/deployment/application && /opt/elasticbeanstalk/iojs-install/iojs-v$NODE_VER-linux-$ARCH/bin/npm install --production) || error_exit "Failed to run npm install.  $OUT" $?
+echo "Installing/updating NPM modules"
+OUT=$([ -d "/tmp/deployment/application" ] && cd /tmp/deployment/application && /opt/elasticbeanstalk/iojs-install/iojs-v$IOJS_VER-linux-$ARCH/bin/npm install --production) || error_exit "Failed to run npm install.  $OUT" $?
 echo $OUT
 
 chmod -R o+r /var/node_modules
