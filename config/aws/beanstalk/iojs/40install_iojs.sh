@@ -17,7 +17,7 @@ echo $OUT
 
 
 #UNCOMMENT to update npm, otherwise will be updated on instance init or rebuild
-#rm -f /opt/elasticbeanstalk/iojs-install/npm_updated
+rm -f /opt/elasticbeanstalk/iojs-install/npm_updated
 
 echo $OUT
 
