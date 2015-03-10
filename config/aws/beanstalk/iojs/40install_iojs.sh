@@ -26,6 +26,10 @@ if [ ! -L /usr/bin/node ]; then
   ln -s /opt/elasticbeanstalk/iojs-install/iojs-v$IOJS_VER-linux-$ARCH/bin/iojs /usr/bin/node
 fi
 
+if [ ! -L /usr/bin/iojs ]; then
+  ln -s /opt/elasticbeanstalk/iojs-install/iojs-v$IOJS_VER-linux-$ARCH/bin/iojs /usr/bin/iojs
+fi
+
 if [ ! -L /usr/bin/npm ]; then
 ln -s /opt/elasticbeanstalk/iojs-install/iojs-v$IOJS_VER-linux-$ARCH/bin/npm /usr/bin/npm
 fi
