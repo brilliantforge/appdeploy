@@ -34,6 +34,10 @@ if [ ! -L /usr/bin/npm ]; then
 ln -s /opt/elasticbeanstalk/iojs-install/iojs-v$IOJS_VER-linux-$ARCH/bin/npm /usr/bin/npm
 fi
 
+if [ ! -L /usr/bin/node-gyp ]; then
+ln -s /opt/elasticbeanstalk/iojs-install/iojs-v$IOJS_VER-linux-$ARCH/lib/node_modules/npm/node_modules/.bin/node-gyp /usr/bin/node-gyp
+fi
+
 echo "checking npm..."
 if [ ! -f "/opt/elasticbeanstalk/iojs-install/npm_updated" ]; then
 cd /opt/elasticbeanstalk/iojs-install/iojs-v$IOJS_VER-linux-$ARCH/bin/ && /opt/elasticbeanstalk/iojs-install/iojs-v$IOJS_VER-linux-$ARCH/bin/npm update npm -g
