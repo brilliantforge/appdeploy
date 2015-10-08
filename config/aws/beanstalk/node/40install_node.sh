@@ -28,11 +28,11 @@ if [ ! -L /usr/bin/node ]; then
 fi
 
 if [ ! -L /usr/bin/npm ]; then
-ln -s /opt/elasticbeanstalk/node-install/iojs-v$NODE_VER-linux-$ARCH/bin/npm /usr/bin/npm
+ln -s /opt/elasticbeanstalk/node-install/node-v$NODE_VER-linux-$ARCH/bin/npm /usr/bin/npm
 fi
 
 if [ ! -L /usr/bin/node-gyp ]; then
-ln -s /opt/elasticbeanstalk/node-install/iojs-v$NODE_VER-linux-$ARCH/lib/node_modules/npm/node_modules/.bin/node-gyp /usr/bin/node-gyp
+ln -s /opt/elasticbeanstalk/node-install/node-v$NODE_VER-linux-$ARCH/lib/node_modules/npm/node_modules/.bin/node-gyp /usr/bin/node-gyp
 fi
 
 echo "checking npm..."
