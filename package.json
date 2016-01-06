@@ -1,0 +1,9 @@
+{
+  "name": "appdeploy",
+  "version": "1.0.1",
+  "description": "Utility scripts to help manage Voicekick systems",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voicekick/appdeploy.git"
+  }
+}
